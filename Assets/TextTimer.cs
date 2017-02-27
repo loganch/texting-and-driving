@@ -27,13 +27,7 @@ public class TextTimer : MonoBehaviour {
 	// Handling to stay alive forever
 
 	void Awake() {
-		cg = Canvas.FindObjectOfType<CanvasGroup> (); 
-		if (instance == null) {
-			instance = this;
-			GameObject.DontDestroyOnLoad (this.gameObject);
-		} else {
-			GameObject.Destroy (this.gameObject);
-		}
+		cg = Canvas.FindObjectOfType<CanvasGroup> ();
 
 		r1 = GameObject.Find("responseOne").GetComponent<Button>();
 		r2 = GameObject.Find ("responseTwo").GetComponent<Button> ();
